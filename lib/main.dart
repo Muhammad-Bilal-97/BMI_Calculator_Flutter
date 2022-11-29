@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Your BMI',
+      title: 'BMI Calculator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Your BMI'),
+      home: const MyHomePage(title: 'BMI Calculator'),
     );
   }
 }
