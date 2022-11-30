@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'BMI Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
       ),
       home: const MyHomePage(title: 'BMI Calculator'),
     );
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var feetController = TextEditingController();
   var inchController = TextEditingController();
 
-  var result = "";
+  var result = "Result";
   var bgColor = Colors.indigo.shade100;
 
 
@@ -49,7 +49,17 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        color: bgColor,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+            Color(0xffffecd2), 
+            Color(0xfffcb69f), 
+            Color(0xffff9b7e), 
+            ],
+            begin: FractionalOffset(1.0, 0.5),
+            end: FractionalOffset(0.0, 0.5),
+          ),
+        ),
         child: Center(
           child: Container(
             width: 300,
